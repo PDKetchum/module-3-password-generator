@@ -20,6 +20,11 @@ I learned how to incorporate .concat and Math.random to combine and randomize se
 1. `git clone git@github.com:PDKetchum/module-3-password-generator.git`
 2. Open `index.html`
 
+## How to use:
+
+1. Click "Generate Password"
+2. Answer pop up messages
+
 Hosted: https://pdketchum.github.io/module-3-password-generator/
 
 GitHub URL: https://github.com/PDKetchum/module-3-password-generator
