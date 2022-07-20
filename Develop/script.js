@@ -55,11 +55,32 @@ var useNumeric = confirm("Do you want numeric characters?");
 // if no confirm is true stop function
 
 if (!useUppercase && !useLowercase && useSpecial && useNumeric) {
-  alert("You must ")
+  alert("You must pick at least one character type.")
 }
 
 
 // if a confirm is true then concat related arr to selected characters arr
+// array compunds based of statement below
+if (useUppercase) {
+  selectedCharacters.concat(uppercaseCharacters);
+
+}
+
+if (useLowercase) {
+  selectedCharacters.concat(lowercaseCharacters);
+  
+}
+
+if (useSpecial) {
+  selectedCharacters.concat(specialCharacters);
+  
+}
+
+if (useNumeric) {
+  selectedCharacters.concat(numbericCharacters);
+  
+}
+
 // i.e ['A', 'B', 'C', a, b, c, 1, 2, 3, %, $, #]
 // var selectedCharacters = [];
 // var uppercaseCharacters = ['A', 'B', 'C'];
@@ -68,7 +89,18 @@ if (!useUppercase && !useLowercase && useSpecial && useNumeric) {
 // }
 // for loop based on password length prompt
 // use Math.floor(Math.random() * selectedCharacters.length) to get random index of selectedCharacters
+// i needs to increase each time to become the password length as soon as pw length selected it will stop runnning
+var password = "";
+
+for (var i=0; i <= passwordLength; i++) {
+  var index = Math.floor(Math.random() * selectedCharacters.length);
+  var randomCharacter = selectedCharacters[index];
+  password = password + randomCharacter
+}
+
 // return password text
+
+return password;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
