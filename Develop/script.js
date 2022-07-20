@@ -128,6 +128,7 @@ function generatePassword() {
 
   if (!useUppercase && !useLowercase && !useSpecial && !useNumeric) {
     alert("You must pick at least one character type.");
+    return null;
   }
 
   // if a confirm is true then concat related arr to selected characters arr
@@ -153,7 +154,7 @@ function generatePassword() {
   // 'i' needs to increase each time to become the password length as soon as pw length selected it will stop runnning
   var password = "";
 
-  for (var i = 0; i <= passwordLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     var index = Math.floor(Math.random() * selectedCharacters.length);
     var randomCharacter = selectedCharacters[index];
     password = password + randomCharacter;
