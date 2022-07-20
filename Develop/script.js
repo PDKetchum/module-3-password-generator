@@ -106,13 +106,12 @@ function generatePassword() {
     "How many characters would you like in your password?"
   );
 
+  // if password length is less than 8 stop function
+  // if password length is greater than 128 stop function
   if (passwordLength < 8 || passwordLength > 128) {
     return "Please pick one number between 8-128";
   }
 
-  // var passwordLength = prompt("How many characters would you like in your password?")
-  // if password length is less than 8 stop function
-  // if password length is greater than 128 stop function
   // confirm() for uppercase letters
   // confirm() for lowercase letters
   // confirm() for special characters
@@ -149,15 +148,9 @@ function generatePassword() {
     selectedCharacters = selectedCharacters.concat(numbericCharacters);
   }
 
-  // i.e ['A', 'B', 'C', a, b, c, 1, 2, 3, %, $, #]
-  // var selectedCharacters = [];
-  // var uppercaseCharacters = ['A', 'B', 'C'];
-  // if(isUppercase) {
-  //   selectedCharacters.concat(uppercaseCharacters);
-  // }
   // for loop based on password length prompt
   // use Math.floor(Math.random() * selectedCharacters.length) to get random index of selectedCharacters
-  // i needs to increase each time to become the password length as soon as pw length selected it will stop runnning
+  // 'i' needs to increase each time to become the password length as soon as pw length selected it will stop runnning
   var password = "";
 
   for (var i = 0; i <= passwordLength; i++) {
